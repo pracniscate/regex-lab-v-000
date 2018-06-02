@@ -1,6 +1,10 @@
 def starts_with_a_vowel?(word)
   # \b stands for word boundary, this match is zero-length
-  word.match(/\b[aeiouAEIOU]/)
+  if word.match(/\b[aeiouAEIOU]/)
+    true
+  else
+    false
+  end
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
