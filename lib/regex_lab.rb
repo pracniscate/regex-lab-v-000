@@ -26,9 +26,6 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  if phone = ~/\b^([0-9]{10})$\b/
-    true
-  else
-    false
-  end
+  # \d stands for any digit
+  phone.scan(/\d/).count == 10
 end
