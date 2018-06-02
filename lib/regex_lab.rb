@@ -17,7 +17,8 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-
+  # \A stands for start of string, [A-Z] stands for capital letters only, $ matches at the end of the string
+  text.match(/\A[A-Z].*\.$/)
 end
 
 def valid_phone_number?(phone)
